@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-7">
+            <img src="images/logo_itbank.png" alt="ITBANK" width="200px">
+        </div>
+        <div class="col-5">
+            Fecha de hoy
+            <div class="w-100"></div>
+            Dolar compra/venta
+        </div>
+    </div>
+    
+    <hr>
+    <h3 class="text-center">Nueva transferencia</h3>
+
+    <hr>
+
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <button type="button" class="btn btn-primary">Agregar destinatario</button>
+        
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Agenda
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item" href="#">Juan Pérez</a></li>
+            <li><a class="dropdown-item" href="#">Ana Pérez</a></li>
+          </ul>
+        </div>
+      </div>
+    
+    <hr>
+   
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Destinatario</span>
+        <input type="text" class="form-control" placeholder="Ingrese CBU/CVU/alias o el nombre si esta en agenda" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">ARS</span>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Motivo
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Alquiler</a></li>
+          <li><a class="dropdown-item" href="#">Expensas</a></li>
+          <li><a class="dropdown-item" href="#">Varios</a></li>
+        </ul>
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-text">Descripción</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+
+      
+
+      <div class="text-center">Por favor, verifique que los datos sean correctos antes de continuar</div>
+
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary">Volver</button>
+        <button type="button" class="btn btn-outline-primary">Continuar</button>
+      </div>
+
+    <hr>
+    
+
+
+
+</body>
+</html>

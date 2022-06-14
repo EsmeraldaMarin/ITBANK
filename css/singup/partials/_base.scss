@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: $font_montserrat;
+}
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+a {
+    color: black;
+}
+select {
+    cursor: pointer;
+}
+aside {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .celeste {
+        position: absolute;
+        width: 613px;
+        height:100%;
+        right: 0px;
+        top: 0px;
+        background-color: $skyblue;
+        clip-path: polygon(100% 0, 23% 100%, 100% 100%);
+        z-index: 10;
+    }
+    .gris {
+        position: absolute;
+        width: 673px;
+        height: 100%;
+        right: 0px;
+        top: 0px;
+        background-color: $grey;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        z-index: 9;
+    }
+    .azul {
+        position: absolute;
+        width: 632px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background-color: $blue;
+        clip-path: polygon(75% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 8;
+    }
+}

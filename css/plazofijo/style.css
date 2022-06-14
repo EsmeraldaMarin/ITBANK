@@ -1,0 +1,137 @@
+*{ 
+    background-color: rgb(2,22,52);
+    font-family:'Montserrat';
+    text-align:center;
+    margin:0;
+    padding:0;
+    font-size: 20px;
+    color:white;
+    margin-left: 0.5rem;
+}
+
+p{
+    font-size: 15px;
+    color: #fbfbfbbb;
+}
+
+
+#titulo{
+    margin-top: 0.5rem;
+    color:white;
+    font-size: 3rem;
+    text-align:justify;
+}
+
+#subtitulo{
+    color:white;
+    font-size: 0.85rem;
+    text-align:justify;
+    margin-bottom: 2.5rem;
+}
+
+.B1
+{
+    font-style: bold;
+    border: 12px white solid;
+    border-radius: 300px;
+    margin-bottom: 0.6rem;
+
+    font-size: 18px;
+    size:1rem;
+    background-color:white;
+    color:rgb(2,22,52);
+}
+
+.B2
+{
+    border: 100px BLACK;
+    border-radius: 300px;
+    margin-bottom: 0.6rem;
+
+    font-size: 28px;
+    background-color:rgb(183, 199, 223);
+    color:rgb(183, 199, 223);
+}
+
+.button:hover{
+    color:rgb(1, 10, 22);
+    box-shadow: 6px 5px 6px 6px rgba(0,0,0,0.2);
+}
+
+
+#PlazoVig{
+    text-align:justify;
+    /*ojo aca viene la linea*/
+    margin-bottom:2rem;
+}
+
+div{
+    margin-bottom: 2rem;
+}
+
+.card{
+    background-color: white;
+    box-shadow: 4px 2px 16px 0 rgba(0,0,0,0.3);
+    width:300px;
+    border-radius: 25px;
+}
+
+.card:hover{
+    box-shadow: 6px 6px 6px 6px rgba(0,0,0,0.4);
+}
+
+.container{
+    border-radius: 25px;
+    background-color: white;
+    padding:8px;
+    color:rgb(2,22,52);
+}
+
+b{
+    font-size:1rem;
+    border:none;
+    background-color: white;
+    color:rgb(2,22,52);
+    /*para 2 lineas  <p class="container saldo"> <hr><b>$45000</b><hr> </p>*/
+}
+
+
+.referencia{
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.info{
+    text-align: right;
+    margin-bottom:0.3rem;
+}
+
+table{
+    width:90%;
+    background-color: white;
+}
+
+#TablaConstituirPF
+{
+    width:70%;
+}
+
+.container2{
+    border-radius: 35px;
+    background-color: white;
+    padding:8px;
+    color:rgb(2,22,52);
+    margin-right:5rem;
+    margin-left: 5rem;
+}
+
+.B3
+{
+    border: 20px rgb(183, 199, 223) solid;
+    border-radius: 100rem;
+    margin-bottom: 2rem;
+
+    font-size: 20px;
+    background-color:rgb(183, 199, 223);
+    color:rgb(2,22,52);
+}
