@@ -1,3 +1,11 @@
+body{
+	min-height: 100vh;
+	margin: 0;
+	background-image: linear-gradient(to right top, #051a39, #034359, #386d70, #759685, #b7bea6);
+
+	color: #fff;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
 	*{
 		margin: 0;
@@ -6,23 +14,18 @@
 		font-family: 'Montserrat Alternates', sans-serif;
 	}
 
-	/*HOLA MARCOS SI ESTAS LEYENDO ESTO TENES QUE BORRAR ESTO DE ACA ABAJO HASTA DONDE TE DIGA, ASI TRABAJAS TRANQUI.
-	LO HICE SOLAMENTE PARA DIFERENCIAR LOS COMPONENTES*/
+	
 	.contenedor{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	.contenedor .componente{
 		margin: 10px;
-		border: 1px solid #fff;
+		
 	}
 
-	/*hasta aca se borra, lo de abajo no eh*/
 
-	body{
-		background: #021634;
-		color: #fff;
-	}
+	
     .itbank{
         color:#FFFFFF ;
         font-family: 'Montserrat';
@@ -70,6 +73,7 @@
 	.container .menu{
 		float: right;
 		line-height: 100px;
+		align-items: stretch;
 	}
 	.container .menu a{
 		display: inline-block;
