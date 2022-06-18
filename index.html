@@ -7,41 +7,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Inicios</title>
-    <link rel="stylesheet" href="css/inicio/index.css">
+    <link rel="stylesheet" href="css/inicio/estilos.css">
 </head>
 
 <body>
-            <h1 class="itbank">ITBANK</h1>
-            <header class="header">
-                <div class="container">
-                    <div class="logo"></div>
+    <h1 class="itbank">ITBANK</h1>
+    <header class="header">
+        <div class="container">
+            <div class="logo"></div>
+        </div>
+        <div id="myMenu" class="menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="transferencias.html" target="_blank">Transfencia</a>
+            <a href="pagoservicios.html" target="_blank">Pagos de servicios</a>
+            <a href="seguros.html" target="_blank">Seguros</a>
+            <a href="pagoservicios.html" target="_blank">Plazo Fijo</a>
+            <a href="Prest.html" target="_blank">Prestamos</a>
+
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ Menu </button>
+        </div>
+
+
+
+
+        <!--primercuadro -->
+        <section class="dolar_contenedor_maximo">
+            <h4>Precio del dolar HOY en Argentina</h4>
+            <div class="contenedor">
+                <div class="componente dolar_of">
+                    <h5><i class="fa-solid fa-money-bill"></i>Dolar Oficial</h5>
+                    <div class="compra_venta">
+                        <p class="compra">
+                            <span>Compra</span>
+                            <span>$</span>
+                        </p>
+                        <p class="venta">
+                            <span>Venta</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+                    <div class="variacion">
+                        <i class="fa-solid fa-caret-down"></i>
+                        <p>
+                            <span>VARIACIÓN </span>
+                        </p>
+                    </div>
+                    <div class="actualizacion">
+                        <p>
+                            <span>ACTUALIZADO: </span>
+
+                        </p>
+                    </div>
                 </div>
-            <div id="myMenu" class="menu">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="transferencias.html" target="_blank">Transfencia</a>
-                <a href="pagoservicios.html" target="_blank">Pagos de servicios</a>
-                <a href="seguros.html" target="_blank">Seguros</a>
-                <a href="pagoservicios.html" target="_blank">Plazo Fijo</a>
-                <a href="Prest.html" target="_blank">Prestamos</a>
-        
-              </div>
-              
-              <div id="main">
-                <button class="openbtn" onclick="openNav()">☰ Menu </button>  
-              </div>
-        
-        
-           
+                <div class="componente dolar_blue">
+                    <h5><i class="fa-solid fa-money-bill"></i>DOLAR BLUE</h5>
+                    <div class="compra_venta">
+                        <p class="compra">
+                            <span>Compra</span>
+                            <span>$</span>
+                        </p>
+                        <p class="venta">
+                            <span>Venta</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+                    <div class="variacion">
+                        <i class="fa-solid fa-caret-down"></i>
+                        <p>
+                            <span>VARIACIÓN </span>
+                        </p>
+                    </div>
+                    <div class="actualizacion">
+                        <p>
+                            <span>ACTUALIZADO: </span>
 
-     <!--primercuadro -->
- <div class="contendor">
-    <div class="contenedorDolar5">
-        <h1>Cotizacion de los dolares</h1>
-    </div>
- </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="componente dolar_ctado">
+                    <h5><i class="fa-solid fa-money-bill"></i>CONTADO CON LIQUI</h5>
+                    <div class="referencia">
+                        <p class="referencia">
+                            <span>Referencia</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+                    <div class="variacion">
+                        <i class="fa-solid fa-caret-down"></i>
+                        <p>
+                            <span>VARIACIÓN </span>
+                        </p>
+                    </div>
+                    <div class="actualizacion">
+                        <p>
+                            <span>ACTUALIZADO: </span>
 
- <button></button>
- <script src="function.js"></script>
+                        </p>
+                    </div>
+                </div>
+                <div class="componente dolar_prom">
+                    <h5><i class="fa-solid fa-money-bills"></i>DOLAR PROMEDIO</h5>
+                    <div class="compra_venta">
+                        <p class="compra">
+                            <span>Compra</span>
+                            <span>$</span>
+                        </p>
+                        <p class="venta">
+                            <span>Venta</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+                    <div class="variacion">
+                        <i class="fa-solid fa-caret-down"></i>
+                        <p>
+                            <span>VARIACIÓN </span>
+                        </p>
+                    </div>
+                    <div class="actualizacion">
+                        <p>
+                            <span>ACTUALIZADO: </span>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="componente dolar_bolsa">
+                    <h5><i class="fa-solid fa-money-bill-trend-up"></i>DOLAR BOLSA</h5>
+                    <div class="referencia">
+                        <p class="referencia">
+                            <span>Referencia</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+                    <div class="variacion">
+                        <i class="fa-solid fa-caret-down"></i>
+                        <p>
+                            <span>VARIACIÓN </span>
+                        </p>
+                    </div>
+                    <div class="actualizacion">
+                        <p>
+                            <span>ACTUALIZADO: </span>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="componente dolar_tur">
+                    <h5><i class="fa-solid fa-plane"></i>DOLAR TURISTA</h5>
+                    <div class="compra_venta">
+                        <p class="venta">
+                            <span>Venta</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+                    <div class="variacion">
+                        <i class="fa-solid fa-caret-down"></i>
+                        <p>
+                            <span>VARIACIÓN </span>
+                        </p>
+                    </div>
+                    <div class="actualizacion">
+                        <p>
+                            <span>ACTUALIZADO: </span>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<button></button>
+<script src="function.js"></script>
 </body>
 
 </html>
