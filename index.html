@@ -7,41 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Inicios</title>
-    <link rel="stylesheet" href="css/inicio/index.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-            <h1 class="itbank">ITBANK</h1>
-            <header class="header">
-                <div class="container">
-                    <div class="logo"></div>
-                </div>
-            <div id="myMenu" class="menu">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="transferencias.html" target="_blank">Transfencia</a>
-                <a href="pagoservicios.html" target="_blank">Pagos de servicios</a>
-                <a href="seguros.html" target="_blank">Seguros</a>
-                <a href="pagoservicios.html" target="_blank">Plazo Fijo</a>
-                <a href="Prest.html" target="_blank">Prestamos</a>
-        
-              </div>
-              
-              <div id="main">
-                <button class="openbtn" onclick="openNav()">☰ Menu </button>  
-              </div>
-        
-        
-           
+    <!--primercuadro -->
+    <section class="dolar_contenedor_maximo">
+        <h4>Precio del dolar HOY en Argentina</h4>
+        <div class="contenedor">
+            <div class="componente dolar_of">
+                <h5><i class="fa-solid fa-money-bill"></i>Dólar Oficial</h5>
+                <div id="dolar_oficial"></div>
+            </div>
+            <div class="componente dolar_blue">
+                <h5><i class="fa-solid fa-money-bill"></i>Dólar Blue</h5>
+                <div id="dolar_blue"></div>
+            </div>
+            <div class="componente dolar_ctado">
+                <h5><i class="fa-solid fa-money-bill"></i>Dólar Contado con Liquidación</h5>
+                <div id="dolar_ccl"></div>
+            </div>
+            <div class="componente dolar_prom">
+                <h5><i class="fa-solid fa-money-bills"></i>Dólar Promedio</h5>
+                <div id="dolar_promedio"></div>
+            </div>
+            <div class="componente dolar_bolsa">
+                <h5><i class="fa-solid fa-money-bill-trend-up"></i>Dólar Bolsa</h5>
+                <div id="dolar_bolsa"></div>
+            </div>
+            <div class="componente dolar_tur">
+                <h5><i class="fa-solid fa-plane"></i>Dólar Turista</h5>
+                <div id="dolar_turista"></div>
+            </div>
+        </div>
+    </section>
 
-     <!--primercuadro -->
- <div class="contendor">
-    <div class="contenedorDolar5">
-        <h1>Cotizacion de los dolares</h1>
-    </div>
- </div>
-
- <button></button>
- <script src="function.js"></script>
+    <button></button>
+    <script src="funciones.js"></script>
 </body>
 
 </html>
