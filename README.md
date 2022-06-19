@@ -5,5 +5,6 @@
 ## Semana 2
 | Archivo                   | Función             | Versión      |
 |:--------------------------|:-------------------:|:------------:|
-|index.html                 | Prueba              |   v1         |
-|funciones.js               | Fetch y publicación |   v1         |
+|index.html                 | Prueba              |   v2         |
+|funciones.js               | Fetch y publicación |   v2         |
+|estilos.css                | Estilos del HTML    |   v1         |
