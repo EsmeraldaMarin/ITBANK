@@ -15,145 +15,183 @@ var promedios = {
 fetch(url)
     .then(response => response.json())
     .then(data => {
+        fecha = new Date();
         let id = data.findIndex(mon => mon.casa.nombre === DOLAR_OFICIAL);
         let dolar_oficial = document.getElementById("dolar_oficial");
-        dolar_oficial.innerHTML =   `<p>Dolar Oficial</p>`
         if(isNaN(parseFloat(data[id].casa.compra))){
-            dolar_oficial.innerHTML += `<p>Compra: No disponible</p>`
+            dolar_oficial.innerHTML += `<p>Compra: no disponible</p>`
         }else{
             dolar_oficial.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
-            dolar_oficial.innerHTML += `<p>Venta: No disponible</p>`
+            dolar_oficial.innerHTML += `<p>Venta: no disponible</p>`
         }else{
             dolar_oficial.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
-        if(isNaN(parseFloat(data[id].casa.variacion))){
-            dolar_oficial.innerHTML += `<p>Variacion: No disponible</p>`
+        let variacion = parseFloat(data[id].casa.variacion.replace(',', '.'));
+        if(isNaN(variacion)){
+            dolar_oficial.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            dolar_oficial.innerHTML += `<p>Variacion: ${data[id].casa.variacion}</p>`
-            promedios.variacion[0] += parseFloat(data[id].casa.variacion);
+            if(variacion > 0){
+                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            }else if(variacion < 0){
+                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+            }else{
+                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+            }
+            promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
         }
+        dolar_oficial.innerHTML += `<p>Act: ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} - ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</p>`;
         /************************************/
         id = data.findIndex(mon => mon.casa.nombre === DOLAR_BLUE);
         let dolar_blue = document.getElementById("dolar_blue");
-        dolar_blue.innerHTML =   `<p>Dolar Blue</p>`
         if(isNaN(parseFloat(data[id].casa.compra))){
-            dolar_blue.innerHTML += `<p>Compra: No disponible</p>`
+            dolar_blue.innerHTML += `<p>Compra: no disponible</p>`
         }else{
-            dolar_blue.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
+            dolar_blue.innerHTML += `<p>Compra: ${parseFloat(data[id].casa.compra).toFixed(2)}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
-            dolar_blue.innerHTML += `<p>Venta: No disponible</p>`
+            dolar_blue.innerHTML += `<p>Venta: no disponible</p>`
         }else{
-            dolar_blue.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
+            dolar_blue.innerHTML += `<p>Venta: ${parseFloat(data[id].casa.venta).toFixed(2)}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
-        if(isNaN(parseFloat(data[id].casa.variacion))){
-            dolar_blue.innerHTML += `<p>Variacion: No disponible</p>`
+        variacion = parseFloat(data[id].casa.variacion.replace(',', '.'));
+        if(isNaN(variacion)){
+            dolar_blue.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            dolar_blue.innerHTML += `<p>Variacion: ${data[id].casa.variacion}</p>`
-            promedios.variacion[0] += parseFloat(data[id].casa.variacion);
+            if(variacion.toFixed(2) > 0){
+                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            }else if(variacion < 0){
+                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+            }else{
+                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+            }
+            promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
         }
+        dolar_blue.innerHTML += `<p>Act: ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} - ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</p>`;
         /**************************/
         id = data.findIndex(mon => mon.casa.nombre === DOLAR_BOLSA);
         let dolar_bolsa = document.getElementById("dolar_bolsa");
-        dolar_bolsa.innerHTML =   `<p>Dolar Bolsa</p>`
         if(isNaN(parseFloat(data[id].casa.compra))){
-            dolar_bolsa.innerHTML += `<p>Compra: No disponible</p>`
+            dolar_bolsa.innerHTML += `<p>Compra: no disponible</p>`
         }else{
             dolar_bolsa.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
-            dolar_bolsa.innerHTML += `<p>Venta: No disponible</p>`
+            dolar_bolsa.innerHTML += `<p>Venta: no disponible</p>`
         }else{
             dolar_bolsa.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
-        if(isNaN(parseFloat(data[id].casa.variacion))){
-            dolar_bolsa.innerHTML += `<p>Variacion: No disponible</p>`
+        variacion = parseFloat(data[id].casa.variacion.replace(',', '.'));
+        if(isNaN(variacion)){
+            dolar_bolsa.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            dolar_bolsa.innerHTML += `<p>Variacion: ${data[id].casa.variacion}</p>`
-            promedios.variacion[0] += parseFloat(data[id].casa.variacion);
+            if(variacion > 0){
+                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            }else if(variacion < 0){
+                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+            }else{
+                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+            }
+            promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
         }
-
+        dolar_bolsa.innerHTML += `<p>Act: ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} - ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</p>`;
         /******************************/
 
         id = data.findIndex(mon => mon.casa.nombre === DOLAR_CCL);
         let dolar_ccl = document.getElementById("dolar_ccl");
-        dolar_ccl.innerHTML =   `<p>Dolar Contado con Liqui</p>`
         if(isNaN(parseFloat(data[id].casa.compra))){
-            dolar_ccl.innerHTML += `<p>Compra: No disponible</p>`
+            dolar_ccl.innerHTML += `<p>Compra: no disponible</p>`
         }else{
             dolar_ccl.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
-            dolar_ccl.innerHTML += `<p>Venta: No disponible</p>`
+            dolar_ccl.innerHTML += `<p>Venta: no disponible</p>`
         }else{
             dolar_ccl.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
-        if(isNaN(parseFloat(data[id].casa.variacion))){
-            dolar_ccl.innerHTML += `<p>Variacion: No disponible</p>`
+        variacion = parseFloat(data[id].casa.variacion.replace(',', '.'));
+        if(isNaN(variacion)){
+            dolar_ccl.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            dolar_ccl.innerHTML += `<p>Variacion: ${data[id].casa.variacion}</p>`
-            promedios.variacion[0] += parseFloat(data[id].casa.variacion);
+            if(variacion > 0){
+                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            }else if(variacion < 0){
+                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+            }else{
+                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+            }
+            promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
         }
-
+        dolar_ccl.innerHTML += `<p>Act: ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} - ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</p>`;
         /***********************************/
         id = data.findIndex(mon => mon.casa.nombre === DOLAR_TURISTA);
         let dolar_turista = document.getElementById("dolar_turista");
-        dolar_turista.innerHTML =   `<p>Dolar Turista</p>`
         if(isNaN(parseFloat(data[id].casa.compra))){
-            dolar_turista.innerHTML += `<p>Compra: No disponible</p>`
+            dolar_turista.innerHTML += `<p>Compra: no disponible</p>`
         }else{
             dolar_turista.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
-            dolar_turista.innerHTML += `<p>Venta: No disponible</p>`
+            dolar_turista.innerHTML += `<p>Venta: no disponible</p>`
         }else{
             dolar_turista.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
-        if(isNaN(parseFloat(data[id].casa.variacion))){
-            dolar_turista.innerHTML += `<p>Variacion: No disponible</p>`
+        variacion = parseFloat(data[id].casa.variacion.replace(',', '.'));
+        if(isNaN(variacion)){
+            dolar_turista.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            dolar_turista.innerHTML += `<p>Variacion: ${data[id].casa.variacion}</p>`
-            promedios.variacion[0] += parseFloat(data[id].casa.variacion);
+            if(variacion > 0){
+                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            }else if(variacion < 0){
+                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+            }else{
+                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+            }
+            promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
         }
-
+        dolar_turista.innerHTML += `<p>Act: ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} - ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</p>`;
         /**************************************/
         promedios.compra[0] /= promedios.compra[1];
         promedios.venta[0] /= promedios.venta[1];
         promedios.variacion[0] /= promedios.variacion[1];
 
         let dolar_promedio = document.getElementById("dolar_promedio");
-        dolar_promedio.innerHTML =  `<p>Dolar Promedio</p>
-                                    <p>Compra: ${promedios.compra[0].toFixed(2)}</p>
-                                    <p>Venta: ${promedios.venta[0].toFixed(2)}</p>
-                                    <p>Variación: ${promedios.variacion[0].toFixed(2)}</p>`;
-
+        dolar_promedio.innerHTML += `<p>Compra: ${promedios.compra[0].toFixed(2)}</p>`;
+        dolar_promedio.innerHTML += `<p>Venta: ${promedios.venta[0].toFixed(2)}</p>`;
+        if(variacion > 0){
+            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+        }else if(variacion < 0){
+            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+        }else{
+            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+        }
+        dolar_promedio.innerHTML += `<p>Act: ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} - ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</p>`;
     })
 
 /*
