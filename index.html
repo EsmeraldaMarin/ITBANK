@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href=https://use.fontawesome.com/releases/v6.1.1/css/all.css>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 13/06</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="flex-container" id = "dolar_oficial">
-    </div>
-    <div class="flex-container" id = "dolar_blue">
-    </div>
-    <div class="flex-container" id = "dolar_ccl">
-    </div>
-    <div class="flex-container" id = "dolar_turista">
-    </div>
-    <div class="flex-container" id = "dolar_bolsa">
-    </div>
-    <div class="flex-container" id = "dolar_promedio">
-    </div>
 
+    <title>Inicios</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!--primercuadro -->
+    <section class="dolar_contenedor_maximo">
+        <h4>Precio del dolar HOY en Argentina</h4>
+        <div class="contenedor">
+            <div class="componente dolar_of">
+                <h5><i class="fa-solid fa-money-bill"></i>Dólar Oficial</h5>
+                <div id="dolar_oficial"></div>
+            </div>
+            <div class="componente dolar_blue">
+                <h5><i class="fa-solid fa-money-bill"></i>Dólar Blue</h5>
+                <div id="dolar_blue"></div>
+            </div>
+            <div class="componente dolar_ctado">
+                <h5><i class="fa-solid fa-money-bill"></i>Dólar Contado con Liquidación</h5>
+                <div id="dolar_ccl"></div>
+            </div>
+            <div class="componente dolar_prom">
+                <h5><i class="fa-solid fa-money-bills"></i>Dólar Promedio</h5>
+                <div id="dolar_promedio"></div>
+            </div>
+            <div class="componente dolar_bolsa">
+                <h5><i class="fa-solid fa-money-bill-trend-up"></i>Dólar Bolsa</h5>
+                <div id="dolar_bolsa"></div>
+            </div>
+            <div class="componente dolar_tur">
+                <h5><i class="fa-solid fa-plane"></i>Dólar Turista</h5>
+                <div id="dolar_turista"></div>
+            </div>
+        </div>
+    </section>
+
+    <button></button>
     <script src="funciones.js"></script>
 </body>
+
+</html>
+
 </html>
