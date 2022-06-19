@@ -21,14 +21,14 @@ fetch(url)
         if(isNaN(parseFloat(data[id].casa.compra))){
             dolar_oficial.innerHTML += `<p>Compra: no disponible</p>`
         }else{
-            dolar_oficial.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
+            dolar_oficial.innerHTML += `<p>Compra: ${parseFloat(data[id].casa.compra).toFixed(2)}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
             dolar_oficial.innerHTML += `<p>Venta: no disponible</p>`
         }else{
-            dolar_oficial.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
+            dolar_oficial.innerHTML += `<p>Venta: ${parseFloat(data[id].casa.venta).toFixed(2)}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
@@ -36,12 +36,12 @@ fetch(url)
         if(isNaN(variacion)){
             dolar_oficial.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            if(variacion > 0){
-                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            if(variacion.toFixed(2) > 0){
+                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: +${variacion}%</span>`;
             }else if(variacion < 0){
-                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}%</span>`;
             }else{
-                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+                dolar_oficial.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}%</span>`;
             }
             promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
@@ -69,11 +69,11 @@ fetch(url)
             dolar_blue.innerHTML += `<p>Variación: no disponible</p>`
         }else{
             if(variacion.toFixed(2) > 0){
-                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: +${variacion}%</span>`;
             }else if(variacion < 0){
-                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}%</span>`;
             }else{
-                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+                dolar_blue.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}%</span>`;
             }
             promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
@@ -85,14 +85,14 @@ fetch(url)
         if(isNaN(parseFloat(data[id].casa.compra))){
             dolar_bolsa.innerHTML += `<p>Compra: no disponible</p>`
         }else{
-            dolar_bolsa.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
+            dolar_bolsa.innerHTML += `<p>Compra: ${parseFloat(data[id].casa.compra).toFixed(2)}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
             dolar_bolsa.innerHTML += `<p>Venta: no disponible</p>`
         }else{
-            dolar_bolsa.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
+            dolar_bolsa.innerHTML += `<p>Venta: ${parseFloat(data[id].casa.venta).toFixed(2)}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
@@ -100,12 +100,12 @@ fetch(url)
         if(isNaN(variacion)){
             dolar_bolsa.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            if(variacion > 0){
-                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            if(variacion.toFixed(2) > 0){
+                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: +${variacion}%</span>`;
             }else if(variacion < 0){
-                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}%</span>`;
             }else{
-                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+                dolar_bolsa.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}%</span>`;
             }
             promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
@@ -118,14 +118,14 @@ fetch(url)
         if(isNaN(parseFloat(data[id].casa.compra))){
             dolar_ccl.innerHTML += `<p>Compra: no disponible</p>`
         }else{
-            dolar_ccl.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
+            dolar_ccl.innerHTML += `<p>Compra: ${parseFloat(data[id].casa.compra).toFixed(2)}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
             dolar_ccl.innerHTML += `<p>Venta: no disponible</p>`
         }else{
-            dolar_ccl.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
+            dolar_ccl.innerHTML += `<p>Venta: ${parseFloat(data[id].casa.venta).toFixed(2)}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
@@ -133,12 +133,12 @@ fetch(url)
         if(isNaN(variacion)){
             dolar_ccl.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            if(variacion > 0){
-                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            if(variacion.toFixed(2) > 0){
+                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: +${variacion}%</span>`;
             }else if(variacion < 0){
-                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}%</span>`;
             }else{
-                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+                dolar_ccl.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}%</span>`;
             }
             promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
@@ -150,14 +150,14 @@ fetch(url)
         if(isNaN(parseFloat(data[id].casa.compra))){
             dolar_turista.innerHTML += `<p>Compra: no disponible</p>`
         }else{
-            dolar_turista.innerHTML += `<p>Compra: ${data[id].casa.compra}</p>`
+            dolar_turista.innerHTML += `<p>Compra: ${parseFloat(data[id].casa.compra).toFixed(2)}</p>`
             promedios.compra[0] += parseFloat(data[id].casa.compra);
             promedios.compra[1]++;
         }
         if(isNaN(parseFloat(data[id].casa.venta))){
             dolar_turista.innerHTML += `<p>Venta: no disponible</p>`
         }else{
-            dolar_turista.innerHTML += `<p>Venta: ${data[id].casa.venta}</p>`
+            dolar_turista.innerHTML += `<p>Venta: ${parseFloat(data[id].casa.venta).toFixed(2)}</p>`
             promedios.venta[0] += parseFloat(data[id].casa.venta);
             promedios.venta[1]++;
         }
@@ -165,12 +165,12 @@ fetch(url)
         if(isNaN(variacion)){
             dolar_turista.innerHTML += `<p>Variación: no disponible</p>`
         }else{
-            if(variacion > 0){
-                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+            if(variacion.toFixed(2) > 0){
+                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: +${variacion}%</span>`;
             }else if(variacion < 0){
-                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}%</span>`;
             }else{
-                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+                dolar_turista.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}%</span>`;
             }
             promedios.variacion[0] += variacion;
             promedios.variacion[1]++;
@@ -184,12 +184,12 @@ fetch(url)
         let dolar_promedio = document.getElementById("dolar_promedio");
         dolar_promedio.innerHTML += `<p>Compra: ${promedios.compra[0].toFixed(2)}</p>`;
         dolar_promedio.innerHTML += `<p>Venta: ${promedios.venta[0].toFixed(2)}</p>`;
-        if(variacion > 0){
-            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: ${variacion}</span>`;
+        if(variacion.toFixed(2) > 0){
+            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-up"></i><span> Variación: +${variacion}%</span>`;
         }else if(variacion < 0){
-            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}</span>`;
+            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-down"></i><span> Variación: ${variacion}%</span>`;
         }else{
-            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}</span>`;
+            dolar_promedio.innerHTML += `<i class="fa-solid fa-caret-right"></i><span> Variación: ${variacion}%</span>`;
         }
         dolar_promedio.innerHTML += `<p>Act: ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} - ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</p>`;
     })
