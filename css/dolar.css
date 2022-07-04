@@ -1,148 +1,72 @@
-body {
-	min-height: 100vh;
-	margin: 0;
-	background-image: linear-gradient(to right top, #051a39, #034359, #386d70, #759685, #b7bea6);
-
-	color: #fff;
+.dolar_contenedor_maximo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap");
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Montserrat Alternates", sans-serif;
-}
-
 .contenedor {
+	background-color: #eee;
+	color: #111;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	width: fit-content;
+	border-radius: 50px;
+	padding: 20px;
 }
 .contenedor .componente {
+	width: 350px;
 	margin: 10px;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #999;
 }
 
-.itbank {
-	color: #ffffff;
-	font-family: "Montserrat";
-	font-style: normal;
-	font-weight: 600;
-	font-size: 120px;
-	line-height: 146px;
+.contenedor .componente h5{
+	padding: 10px;
+	text-align: center;
+	background-color: aqua;
+	color: rgb(0, 98, 98);
+}
+.contenedor .componente div{
+	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 10px;
+}
+
+.componente i{
+	margin-right: 20px;
+}
+
+.contenedor .componente div p:nth-child(1) { 
+	grid-area: 1 / 1 / 2 / 2; 
 	text-align: center;
 }
-.capa {
-	position: fixed;
+.contenedor .componente div p:nth-child(2)  { 
+	grid-area: 1 / 2 / 2 / 3; 
+	text-align: center;
+}
+.contenedor .componente div span  { 
+	height: 30px;
 	width: 100%;
-	height: 100vh;
-	background: rgba(0, 0, 0, 0.6);
-	z-index: -1;
-	top: 0;
-	left: 0;
+	grid-area: 2 / 2 / 3 / 3; 
+	background-color: aquamarine;
+	text-align: center;
+	line-height: 30px;
 }
-/*Estilos para el encabezado*/
-.header {
+.contenedor .componente div i  { 
 	width: 100%;
-	height: 100px;
-	position: fixed;
-	top: 0;
-	left: 0;
+	height: 30px;
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: aquamarine; 
+	text-align: right;
+	padding-right: 30px;
+	line-height: 30px;
 }
-.container {
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;
-}
-.container .btn-menu,
-.logo {
-	float: left;
-	line-height: 100px;
-}
-.container .btn-menu label {
-	color: #fff;
-	font-size: 25px;
-	cursor: pointer;
-}
-.logo h1 {
-	color: #fff;
-	font-weight: 400;
-	font-size: 22px;
-	margin-left: 10px;
-}
-.container .menu {
-	float: right;
-	line-height: 100px;
-	align-items: stretch;
-}
-.container .menu a {
+.contenedor .componente div p:nth-child(5)  { 
+	grid-area: 3 / 1 / 4 / 3; 
 	display: inline-block;
-	padding: 15px;
-	line-height: normal;
-	text-decoration: none;
-	color: #fff;
-	transition: all 0.3s ease;
-	border-bottom: 2px solid transparent;
-	font-size: 15px;
-	margin-right: 5px;
+	text-align: center;
 }
-.container .menu a:hover {
-	border-bottom: 2px solid #c7c7c7;
-	padding-bottom: 5px;
-}
-/*Fin de Estilos para el encabezado*/
-
-/*Menù lateral*/
-#btn-menu {
-	display: none;
-}
-.container-menu {
-	position: absolute;
-	background: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	transition: all 500ms ease;
-	opacity: 0;
-	visibility: hidden;
-}
-#btn-menu:checked ~ .container-menu {
-	opacity: 1;
-	visibility: visible;
-}
-.cont-menu {
-	width: 100%;
-	max-width: 250px;
-	background: #1c1c1c;
-	height: 100vh;
-	position: relative;
-	transition: all 500ms ease;
-	transform: translateX(-100%);
-}
-#btn-menu:checked ~ .container-menu .cont-menu {
-	transform: translateX(0%);
-}
-.cont-menu nav {
-	transform: translateY(15%);
-}
-.cont-menu nav a {
-	display: block;
-	text-decoration: none;
-	padding: 20px;
-	color: #c7c7c7;
-	border-left: 5px solid transparent;
-	transition: all 400ms ease;
-}
-.cont-menu nav a:hover {
-	border-left: 5px solid #c7c7c7;
-	background: #1f1f1f;
-}
-.cont-menu label {
-	position: absolute;
-	right: 5px;
-	top: 10px;
-	color: #fff;
-	cursor: pointer;
-	font-size: 18px;
-}
-/*Fin de Menù lateral*/

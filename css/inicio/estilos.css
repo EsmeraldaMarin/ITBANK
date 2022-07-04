@@ -1,8 +1,7 @@
 body{
 	min-height: 100vh;
 	margin: 0;
-	background-image: linear-gradient(to right top, #051a39, #034359, #386d70, #759685, #b7bea6);
-
+	background-image: linear-gradient(to right top, #051a39, #034359,  #b7bea6);
 	color: #fff;
 }
 
@@ -13,18 +12,6 @@ body{
 		box-sizing: border-box;
 		font-family: 'Montserrat Alternates', sans-serif;
 	}
-
-	
-	.contenedor{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	.contenedor .componente{
-		margin: 10px;
-		
-	}
-
-
 	
     .itbank{
         color:#FFFFFF ;
@@ -39,7 +26,7 @@ body{
 		position: fixed;
 		width: 100%;
 		height: 100vh;
-		background: rgba(0,0,0,0.6);
+		/* background: rgba(0,0,0,0.6); */
 		z-index: -1;
 		top: 0;left: 0;
 	}
