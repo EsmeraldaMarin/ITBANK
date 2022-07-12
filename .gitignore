@@ -1,0 +1,14 @@
+# Ignora archivos sass
+.sass-cache
+
+# ignora algunos archivos html
+
+IndexPlazoFijo.html
+IndexPlazoFijo2.html
+inver.html
+nueva_transferencia.html
+Prest.html
+pagoservicios.html
+seguros.html
+transferencias.html
+
