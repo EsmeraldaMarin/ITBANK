@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/app/dolar.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/app/estilos.css">
@@ -31,7 +33,8 @@
         <nav>
             <ul>
                 <li class="active"><a href="/">Inicio</a></li>
-                <li><a href="/nueva_transferencia.html">Transfencias</a></li>
+                <li><a href="/transferencias.html">Actividad</a></li>
+                <li><a href="/nueva_transferencia.html">Transferir dinero</a></li>
                 <li><a href="/pagoservicios.html">Pagos de servicios</a></li>
                 <li><a href="/seguros.html">Seguros</a></li>
                 <li><a href="/IndexPlazoFijo.html">Plazo Fijo</a></li>
@@ -49,7 +52,7 @@
                 <a href="login.html">Cerrar Sesion</a>
             </div>
         </header>
-        <button id="btndolar">VER DOLAR</button>
+        <button id="btndolar">VER COTIZACION DOLAR</button>
         <section class="dolar_contenedor_maximo">
             <span class="salir"> X </span>
             <h4>Precio del dolar HOY en Argentina</h4>
@@ -80,6 +83,62 @@
                 </div>
             </div>
         </section>
+        <div class="main">
+            <div class="card dinero_disp_card">
+                <p>Dinero Disponible <span>$50000</span></p>
+                <div class="acts">
+                    <div>Transferir</div>
+                    <div>Mi CVU</div>
+                </div>
+            </div>
+            <div class="card activities_card">
+                <h2>Tu Actividad</h2>
+                <div class="buscador">
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    </form>
+                </div>
+                <ul class="actividades">
+                    <li class="act">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <div>
+                            <p><span>Transferiste a</span> <span>AMIR ADAM ARGUELLO</span></p>
+                            <p>El dia: <span>25/02/2022</span></p>
+                        </div>
+                        <span>DEBITADO</span>
+                        <p>-$5000</p>
+                    </li>
+                    <li class="act">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <div>
+                            <p><span>Transferiste a</span> <span>AMIR ADAM ARGUELLO</span></p>
+                            <p>El dia: <span>25/02/2022</span></p>
+                        </div>
+                        <span>DEBITADO</span>
+                        <p>-$5000</p>
+                    </li>
+                    <li class="act">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <div>
+                            <p><span>Transferiste a</span> <span>AMIR ADAM ARGUELLO</span></p>
+                            <p>El dia: <span>25/02/2022</span></p>
+                        </div>
+                        <span>DEBITADO</span>
+                        <p>-$5000</p>
+                    </li>
+                    <li class="act">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <div>
+                            <p><span>Transferiste a</span> <span>AMIR ADAM ARGUELLO</span></p>
+                            <p>El dia: <span>25/02/2022</span></p>
+                        </div>
+                        <span>DEBITADO</span>
+                        <p>-$5000</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
     <script src="src/dolarApi.js"></script>
     <script src="src/index.js"></script>

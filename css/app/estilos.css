@@ -109,6 +109,7 @@ body aside nav ul li a {
 
 body aside nav ul li a:hover {
   text-decoration: underline;
+  color: #000;
   cursor: pointer;
 }
 
@@ -140,5 +141,119 @@ body main header div a {
 
 body main header div a:hover {
   background-color: skyblue;
+}
+
+body main > button {
+  margin-left: 50px;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+body main > button:hover {
+  background-color: skyblue;
+}
+
+body main .main {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+body main .main .dinero_disp_card {
+  width: 300px;
+  height: fit-content;
+}
+
+body main .main .dinero_disp_card p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+body main .main .dinero_disp_card p span {
+  font-size: 2.3rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+body main .main .dinero_disp_card .acts {
+  display: flex;
+  border-top: 1px solid #bbb;
+  padding: 20px 0 0 0;
+  justify-content: space-between;
+}
+
+body main .main .dinero_disp_card .acts div {
+  background-color: skyblue;
+  width: 48%;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  border-radius: 10px;
+  cursor: default;
+}
+
+body main .main .dinero_disp_card .acts div:hover {
+  background-color: #19a6de;
+}
+
+body main .main .activities_card {
+  width: 100%;
+}
+
+body main .main .activities_card .buscador {
+  width: 50%;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+
+body main .main .activities_card ul.actividades {
+  padding: 0;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+body main .main .activities_card ul.actividades li.act {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding-left: 60px;
+  margin-bottom: 20px;
+}
+
+body main .main .activities_card ul.actividades li.act > i {
+  position: absolute;
+  left: 0;
+  background-color: skyblue;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+}
+
+body main .main .activities_card ul.actividades li.act > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body main .main .activities_card ul.actividades li.act > div p {
+  margin: 0;
+}
+
+body main .main .activities_card ul.actividades li.act > span {
+  background-color: skyblue;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 50px;
+}
+
+body main .main .activities_card ul.actividades li.act > p {
+  margin: 0;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=estilos.css.map */
