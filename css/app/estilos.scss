@@ -19,23 +19,52 @@ body {
         display: flex;
         flex-direction: column;
         font-size: 1.1rem;
-        .userInfo{
+        .userInfo {
             padding: 30px 20px;
             color: #000;
             display: grid;
             grid-template-columns: 70px 1fr;
             grid-template-rows: 1fr 1fr;
-            div{
+            div {
                 background-color: #021634;
                 width: 50px;
                 height: 50px;
                 border-radius: 100%;
                 grid-area: 1/1/3/2;
+                &::after {
+                    display: inline-block;
+                    font-size: 0.8rem;
+                    padding: 2px;
+                    text-align: center;
+                    width: 90%;
+                    border-radius: 50px;
+                    margin-top: 45px;
+                }
             }
-            p:nth-child(2){
+            p:nth-child(2) {
                 grid-area: 1/2/2/3;
             }
+            &.classic {
+                div.img::after {
+                    content: "Classic";
+                    background-color: skyblue;
+                }
+            }
+            &.gold {
+                div.img::after {
+                    content: "Gold";
+                    background-color: gold;
+                }
+            }
+            &.black {
+                div.img::after {
+                    content: "Black";
+                    background-color: black;
+                    color: #fff;
+                }
+            }
         }
+
         nav ul {
             display: flex;
             flex-direction: column;
@@ -46,7 +75,7 @@ body {
                     position: relative;
                     a {
                         color: #021634;
-                        &::before{
+                        &::before {
                             content: "";
                             position: absolute;
                             top: 0;
@@ -55,12 +84,11 @@ body {
                             height: 100%;
                             background-color: #021634;
                         }
-                        &:hover{
+                        &:hover {
                             text-decoration: none;
                             cursor: default;
                         }
                     }
-                   
                 }
                 a {
                     display: inline-block;
@@ -69,7 +97,7 @@ body {
                     padding: 20px 0 20px 20px;
                     color: #000;
                     text-decoration: none;
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                         cursor: pointer;
                     }
@@ -79,21 +107,22 @@ body {
     }
     main {
         width: 80%;
-        header{
+        header {
             padding: 30px 50px;
             display: flex;
             justify-content: space-between;
-            h1{
+            h1 {
                 font-size: 3rem;
             }
-            div{
+            div {
                 display: flex;
                 align-items: center;
-                button{
+                a {
+                    background-color: #ddd;
                     margin-left: 20px;
                     padding: 10px 20px;
                     border-radius: 20px;
-                    &:hover{
+                    &:hover {
                         background-color: skyblue;
                     }
                 }

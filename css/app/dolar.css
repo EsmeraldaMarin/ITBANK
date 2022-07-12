@@ -1,10 +1,37 @@
 .dolar_contenedor_maximo{
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.662);
+	z-index: 1000;
+	backdrop-filter: blur(2px);
 }
+.salir{
+	background-color: rgba(255, 255, 255, 0.825);
+	color: #000;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	position: absolute;
+	top:  50px;
+	right: 70px;
+	cursor: pointer;
+}
+.salir:hover{
+	background-color: #aaa;
+}
+
 .contenedor {
 	background-color: #eee;
 	color: #111;

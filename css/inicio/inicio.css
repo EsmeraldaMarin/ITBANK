@@ -1,0 +1,46 @@
+body {
+  background-color: #021634;
+}
+
+body header {
+  height: 80px;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body header div {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+body header div a {
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+body header div a.sig {
+  background-color: skyblue;
+}
+
+body header div a.sig:hover {
+  background-color: #3b9bc2;
+}
+
+body header div a.log {
+  border: 2px solid #eee;
+}
+
+body header div a.log:hover {
+  background-color: #eee;
+}
+
+body main a {
+  display: inline-block;
+  margin: 50px;
+  background-color: #f00;
+  padding: 20px 40px;
+}
+/*# sourceMappingURL=inicio.css.map */

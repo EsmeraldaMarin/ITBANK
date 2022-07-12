@@ -1,0 +1,39 @@
+body{
+    background-color: #021634;
+    header{
+        height: 80px;
+        display: flex;
+        background-color: #fff;
+        justify-content: space-around;
+        align-items: center;
+        div{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            a{
+                border-radius: 50px;
+                padding: 10px 20px;
+                &.sig{
+                    background-color: skyblue;
+                    &:hover{
+                        background-color: rgb(59, 155, 194);
+                    }
+                }
+                &.log{
+                    border: 2px solid #eee;
+                    &:hover{
+                        background-color: #eee;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        a{
+            display: inline-block;
+            margin: 50px;
+            background-color: #f00;
+            padding: 20px 40px;
+        }
+    }
+}
